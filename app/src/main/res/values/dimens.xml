@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding and Margins -->
+    <dimen name="padding_standard">16dp</dimen>
+    <dimen name="margin_standard">10dp</dimen>
+    <dimen name="margin_bottom_standard">16dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_large">36sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_normal">13sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <!-- Button Corner Radius -->
+    <dimen name="button_corner_radius">8dp</dimen>
+</resources>
+

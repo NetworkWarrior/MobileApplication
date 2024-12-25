@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Custom Background Color -->
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TextStyleHeading">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyleSubHeading">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="TextStyleNormal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="ButtonStyle">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+    </style>
+
+    <!-- CheckBox Style -->
+    <style name="CheckBoxStyle">
+        <item name="android:buttonTint">@color/colorPrimary</item>
+    </style>
+
+</resources>

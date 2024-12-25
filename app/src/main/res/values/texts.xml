@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="terms_and_conditions">
+        By checking the box you agree to our <font color="#6200EE">Terms</font> and <font color="#6200EE">Conditions</font>
+    </string>
+</resources>
