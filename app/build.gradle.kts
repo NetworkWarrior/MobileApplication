@@ -47,7 +47,14 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
 
     // Testing Dependencies
-    testImplementation("junit:junit:4.13.2")
+    testImplementation("junit:junit:4.13.2") // JUnit 4 (default for Android)
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.0") // JUnit 5 core API
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.0") // JUnit 5 runtime engine
+
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform() // Enable JUnit 5 for JVM tests
 }
