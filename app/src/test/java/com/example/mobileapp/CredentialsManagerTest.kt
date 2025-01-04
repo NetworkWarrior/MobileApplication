@@ -1,6 +1,7 @@
 package com.example.mobileapp
+
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Assertions.* // Import only JUnit 5 assertions
+import org.junit.jupiter.api.Assertions.*
 
 class CredentialsManagerTest {
 
@@ -34,5 +35,17 @@ class CredentialsManagerTest {
     fun givenFilledPassword_whenValidated_thenReturnTrue() {
         val result = credentialsManager.isPasswordValid("securePassword123")
         assertEquals(true, result)
+    }
+
+    @Test
+    fun givenValidUser_whenValidated_thenReturnTrue() {
+        val result = credentialsManager.isValidUser("test@te.st", "1234")
+        assertEquals(true, result)
+    }
+
+    @Test
+    fun givenInvalidUser_whenValidated_thenReturnFalse() {
+        val result = credentialsManager.isValidUser("invalid@test.com", "wrongPassword")
+        assertEquals(false, result)
     }
 }
