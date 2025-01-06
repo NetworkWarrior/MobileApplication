@@ -1,5 +1,5 @@
 package com.example.mobileapp
-
+import CredentialsManager
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -17,7 +17,6 @@ class LoginActivity : AppCompatActivity() {
         binding = LoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set up click listeners
         binding.btnLogin.setOnClickListener { handleLogin() }
         binding.tvRegisterNow.setOnClickListener { navigateToRegister() }
     }
@@ -26,7 +25,6 @@ class LoginActivity : AppCompatActivity() {
         val email = binding.etEmail.text.toString()
         val password = binding.etPassword.text.toString()
 
-        // Validate inputs
         if (!credentialsManager.isEmailValid(email)) {
             showError(binding.etEmail, "Invalid email format")
             return
@@ -36,8 +34,6 @@ class LoginActivity : AppCompatActivity() {
             showError(binding.etPassword, "Password cannot be empty")
             return
         }
-
-        // Check hardcoded credentials
         if (email == "test@te.st" && password == "1234") {
             navigateToHome() // Navigate to HomeActivity
         } else {
@@ -51,13 +47,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navigateToHome() {
-        val intent = Intent(this, HomeActivity::class.java) // Navigate to HomeActivity
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
     }
 
     private fun navigateToRegister() {
-        // Navigate to RegistrationActivity
         val intent = Intent(this, RegistrationActivity::class.java)
         startActivity(intent)
     }

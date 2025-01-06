@@ -15,10 +15,8 @@ class FragmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)
 
-        // Show FragmentA initially
         replaceFragment(FragmentA())
 
-        // Set up button click listener to toggle fragments
         findViewById<Button>(R.id.btnToggleFragment).setOnClickListener {
             if (isFragmentAVisible) {
                 replaceFragment(FragmentB())
