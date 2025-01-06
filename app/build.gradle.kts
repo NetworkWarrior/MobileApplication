@@ -50,6 +50,7 @@ dependencies {
 
     // Material Components for UI components such as MaterialCardView
     implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.activity:activity:1.8.0")
 
     // Testing Dependencies
     testImplementation("junit:junit:4.13.2") // JUnit 4 (default for Android)

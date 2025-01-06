@@ -11,5 +11,6 @@
     <!-- Text Colors -->
     <color name="textPrimary">#252525</color>
     <color name="textSecondary">#252525</color>
+    <color name="white">#FFFFFF</color>
 </resources>
 

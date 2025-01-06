@@ -3,11 +3,13 @@ package com.example.mobileapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.CheckBox
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobileapp.databinding.ActivityMainBinding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -19,7 +21,6 @@ class RegistrationActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get references to your UI elements using binding
         val etFullName = binding.etFullName
         val etEmail = binding.etEmail
         val etPhoneNumber = binding.etPhoneNumber
