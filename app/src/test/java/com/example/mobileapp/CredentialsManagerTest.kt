@@ -39,6 +39,7 @@ class CredentialsManagerTest {
 
     @Test
     fun givenValidUser_whenValidated_thenReturnTrue() {
+        credentialsManager.registerUser("test@te.st", "1234")
         val result = credentialsManager.isValidUser("test@te.st", "1234")
         assertEquals(true, result)
     }
@@ -47,5 +48,28 @@ class CredentialsManagerTest {
     fun givenInvalidUser_whenValidated_thenReturnFalse() {
         val result = credentialsManager.isValidUser("invalid@test.com", "wrongPassword")
         assertEquals(false, result)
+    }
+
+    // Test for registering a new user
+    @Test
+    fun givenNewEmail_whenRegistered_thenReturnSuccessMessage() {
+        val result = credentialsManager.registerUser("newuser@example.com", "password123")
+        assertEquals("Registration successful", result)
+    }
+
+    // Test for duplicate email registration
+    @Test
+    fun givenDuplicateEmail_whenRegistered_thenReturnErrorMessage() {
+        credentialsManager.registerUser("test@te.st", "1234")
+        val result = credentialsManager.registerUser("TEST@te.st", "newpassword")
+        assertEquals("Email already taken", result)
+    }
+
+    // Ensure registration works for new email
+    @Test
+    fun givenNewUser_whenRegistered_thenLoginShouldWork() {
+        credentialsManager.registerUser("newuser@example.com", "password123")
+        val result = credentialsManager.isValidUser("newuser@example.com", "password123")
+        assertEquals(true, result)
     }
 }
